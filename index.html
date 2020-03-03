@@ -15,7 +15,12 @@
         let compMove = computerPlay(action);
 
         // Human input
-        let humanInput = prompt("Rock, Paper or Scissors?").toLowerCase()
+       
+
+        function humanInput() {
+            return prompt("Rock, Paper or Scissors?").toLowerCase();
+        }
+        let humanMove = humanInput();
 
         // Function that allows one round of play between human and computer
         // and award one point to the winner of the round
@@ -26,32 +31,41 @@
                 return "You have tied! Try again";
             }
             else if (playerSelection === "rock" && computerSelection === "paper"){
-                compScore++
+                compScore++;
             return "You Lose! Paper beats Rock!";
 
             } else if (playerSelection === "paper" && computerSelection === "scissors"){
-                compScore++
+                compScore++;
                 return "You Lose! Scissors beats Paper!";
 
             } else if (playerSelection === "scissors" && computerSelection === "rock") {
-                compScore++
+                compScore++;
                 return "You Lose! Rock beats Scissors!";
             } else {
-                humanScore++
+                humanScore++;
                 return "You Win!";
             }
                 
         
         }
         // code that initializes the game in console
-       console.log(humanInput);
+      /* console.log(humanMove);
        console.log(compMove);
-       console.log(playRound(humanInput, compMove));
+       console.log(playRound(humanInput, compMove)); */
 
-    
+        let i = 0;
         function game() {
-            
+            while (i < 5) {
+                let compMove = computerPlay(action);
+                let humanMove = humanInput();
+            console.log(humanMove);
+            console.log(compMove);
+            console.log(playRound(humanMove, compMove));
+            i++;
+         } 
         }
+
+       let playGame = game();
 
 
         </script>
