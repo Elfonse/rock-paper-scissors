@@ -8,17 +8,38 @@
         <script>
            // Function for computer action rock/paper/scissors
 
-        const action = ['Rock','Paper','Scissors'];
+        const action = ['rock','paper','scissors'];
         function computerPlay(action) {
             return action[Math.floor(Math.random()*action.length)];
         }
+        let compMove = computerPlay(action);
 
         // Human input
         let humanInput = prompt("Rock, Paper or Scissors?").toLowerCase()
 
         function playRound(playerSelection, computerSelection) {
-            
+            if (playerSelection === computerSelection) {
+                return "You have tied! Try again";
+            }
+            else if (playerSelection === "rock" && computerSelection === "paper"){
+            return "You Lose! Paper beats Rock!";
+
+            } else if (playerSelection === "paper" && computerSelection === "scissors"){
+                return "You Lose! Scissors beats Paper!";
+
+            } else if (playerSelection === "scissors" && computerSelection === "rock") {
+                return "You Lose! Rock beats Scissors!";
+            } else {
+                return "You Win!";
+            }
+                
+        
         }
+
+    
+       console.log(humanInput);
+       console.log(compMove);
+       console.log(playRound(humanInput, compMove));
 
         </script>
     </body>
