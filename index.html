@@ -61,11 +61,25 @@
             console.log(humanMove);
             console.log(compMove);
             console.log(playRound(humanMove, compMove));
+            console.log("Human score is: " + humanScore);
+            console.log("Computer score is: " + compScore);
             i++;
-         } 
+         }
         }
 
        let playGame = game();
+    //  declares an overall winner in the console
+    function scoreChecker(){
+        if (humanScore > compScore) {
+           return "You\'ve beaten the computer!";
+       } else if (humanScore < compScore) {
+           return "The computer has beaten you!";
+       } else {
+           return "You both lose!";
+       } 
+    }
+
+    console.log(scoreChecker());
 
 
         </script>
