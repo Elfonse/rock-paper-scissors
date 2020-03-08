@@ -63,8 +63,6 @@ function roundOnClickTrue() {
     playRound(humanMove, compMove);
     displayedHumanScore = humanScore;
     displayedCompScore = compScore;
-    console.log(displayedCompScore);
-   console.log(displayedHumanScore);
 }
 
 function gameOver() {
@@ -78,3 +76,15 @@ function roundOnClick() {
         } else {
        return roundOnClickTrue();
     }}
+
+// DOM Elements
+
+const scoreContainer = document.querySelector("#scoreContainer");
+const humanScoreBox = document.querySelector("#humanScore");
+const compScoreBox = document.querySelector("#compScore");
+
+scoreContainer.appendChild(humanScoreBox);
+scoreContainer.appendChild(compScoreBox);
+
+function scoreOnPage 
+humanScoreBox.innerHTML = displayedHumanScore;
