@@ -63,7 +63,11 @@ function roundOnClickTrue() {
 }
 
 function gameOver() {
-    console.log('Game over');
+    if (humanScore > compScore) {
+       return gameOverHuman();
+    } else {
+       return gameOverComputer();
+    }
 }
 
 
@@ -80,12 +84,15 @@ function roundOnClick() {
 const scoreContainer = document.querySelector("#scoreContainer");
 const humanScoreBox = document.querySelector("#humanScore");
 const compScoreBox = document.querySelector("#compScore");
-const compMoveContainer = document.querySelector("#compMoveContainer")
+const compMoveContainer = document.querySelector("#compMoveContainer");
 const compMoveBox = document.querySelector("#compMoveBox");
+const gameOverContainer = document.querySelector("#gameOverContainer");
+const gameOverBox = document.querySelector("#gameOver");
 
 scoreContainer.appendChild(humanScoreBox);
 scoreContainer.appendChild(compScoreBox);
 compMoveContainer.appendChild(compMoveBox);
+gameOverContainer.appendChild(gameOverBox);
 
 
 function scoreOnPage() {
@@ -94,6 +101,7 @@ compScoreBox.innerHTML = displayedCompScore;
 compMoveBox.innerHTML = compMove;
 }
 
+// click event for reset
 document.getElementById("resetGame").addEventListener("click", function() {
     resetGame();
   });
@@ -109,6 +117,15 @@ function resetGame() {
     humanScoreBox.innerHTML = 0;
     compScoreBox.innerHTML = 0;
     compMoveBox.innerHTML = "";
+    gameOverBox.innerHTML ="";
+}
+
+function gameOverHuman() {
+    gameOverBox.innerHTML = "GAME OVER. YOU WIN!"
+}
+
+function gameOverComputer(){
+    gameOverBox.innerHTML = "GAME OVER. YOU LOSE!"
 }
 
 /* document.getElementById("rock").removeEventListener("click", playRound); {
