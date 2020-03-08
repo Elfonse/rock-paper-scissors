@@ -56,14 +56,25 @@
           
   
   }
+  let displayedHumanScore = 0;
+  let displayedCompScore = 0;
 
-function roundOnClick() {
+function roundOnClickTrue() {
     playRound(humanMove, compMove);
-    let displayedHumanScore = humanScore;
-    let displayedCompScore = compScore;
+    displayedHumanScore = humanScore;
+    displayedCompScore = compScore;
     console.log(displayedCompScore);
    console.log(displayedHumanScore);
 }
 
+function gameOver() {
+    console.log('Game over');
+}
 
 
+function roundOnClick() {
+    if (displayedHumanScore >= 5 || displayedCompScore >= 5) {
+       return gameOver();
+        } else {
+       return roundOnClickTrue();
+    }}
