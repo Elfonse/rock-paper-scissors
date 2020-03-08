@@ -6,25 +6,33 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="wholePageContainer">
+        <div class="titleContainer">
          <h1 id="pageTitle">Rock, Paper, Scissors!</h1>
+        </div>
          <!-- Container for R,P,S buttons-->
          <div class = "buttonContainer">
             <div class ="button">
-                <h3 id="rock" class ="optionButton">Rock</h3>
+                <span id="rock" class ="optionButton">Rock</span>
             </div>
             <div class ="button">
-                <h3 id="paper" class ="optionButton">Paper</h3>
+                <span id="paper" class ="optionButton">Paper</span>
             </div>
             <div class ="button">
-                <h3 id="scissors" class ="optionButton">Scissors</h3>
+                <span id="scissors" class ="optionButton">Scissors</span>
             </div>
             <!-- container for score counter-->
             <div class="scoreContainer">
-                <div class="score" id="humanScore">Human Score is:</div>
-                <div class="score" id="compScore">Comp Score is:</div>
+                <div class="score" id="humanScore">
+                    <span class="scoreOutput"> Human Score is:</span>
+                </div>
+                <div class="score" id="compScore">
+                    <span class="scoreOutput"> Comp Score is:</span>
+                    </div>
             </div>
 
          </div>
+        </div>
      <script src='javascript.js'></script>    
     </body>
 </html>
