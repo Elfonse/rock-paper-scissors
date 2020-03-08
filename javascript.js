@@ -4,7 +4,7 @@
   function computerPlay(action) {
       return action[Math.floor(Math.random()*action.length)];
   }
-  let compMove;
+  let compMove = null;
 
   // Human input
 
@@ -71,9 +71,10 @@ function gameOver() {
 
 
 function roundOnClick() {
-    if (displayedHumanScore >= 5 || displayedCompScore >= 5) {
+    if (displayedHumanScore >= 6 || displayedCompScore >= 6) {
        return gameOver();
         } else {
+            scoreOnPage()
        return roundOnClickTrue();
     }}
 
@@ -82,9 +83,17 @@ function roundOnClick() {
 const scoreContainer = document.querySelector("#scoreContainer");
 const humanScoreBox = document.querySelector("#humanScore");
 const compScoreBox = document.querySelector("#compScore");
+const compMoveContainer = document.querySelector("#compMoveContainer")
+const compMoveBox = document.querySelector("#compMoveBox");
 
 scoreContainer.appendChild(humanScoreBox);
 scoreContainer.appendChild(compScoreBox);
+compMoveContainer.appendChild(compMoveBox);
 
-function scoreOnPage 
+
+function scoreOnPage() {
 humanScoreBox.innerHTML = displayedHumanScore;
+compScoreBox.innerHTML = displayedCompScore;
+compMoveBox.innerHTML = compMove;
+}
+
