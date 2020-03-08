@@ -4,21 +4,37 @@
   function computerPlay(action) {
       return action[Math.floor(Math.random()*action.length)];
   }
-  let compMove = computerPlay(action);
+  let compMove;
 
   // Human input
- 
 
-  function humanInput() {
-      return prompt("Rock, Paper or Scissors?").toLowerCase();
-  }
-  let humanMove = humanInput();
+  let humanMove;
+
+  document.getElementById("rock").addEventListener("click", function() {
+    humanMove = "rock";
+    roundOnClick();
+  });
+
+  document.getElementById("paper").addEventListener("click", function() {
+    humanMove = "paper";
+    roundOnClick();
+  });
+
+  document.getElementById("scissors").addEventListener("click", function() {
+    humanMove = "scissors";
+    roundOnClick();
+  });
+
 
   // Function that allows one round of play between human and computer
   // and award one point to the winner of the round
   let compScore = 0;
   let humanScore = 0;
   function playRound(playerSelection, computerSelection) {
+      compMove = computerPlay(action);
+      console.log(playerSelection);
+      console.log(computerSelection);
+      console.log(computerPlay(action));
       if (playerSelection === computerSelection) {
           return "You have tied! Try again";
       }
@@ -40,35 +56,14 @@
           
   
   }
-  // code that initializes the game in console
-/* console.log(humanMove);
- console.log(compMove);
- console.log(playRound(humanInput, compMove)); */
 
-  let i = 0;
-  function game() {
-      while (i < 5) {
-          let compMove = computerPlay(action);
-          let humanMove = humanInput();
-      console.log(humanMove);
-      console.log(compMove);
-      console.log(playRound(humanMove, compMove));
-      console.log("Human score is: " + humanScore);
-      console.log("Computer score is: " + compScore);
-      i++;
-   }
-  }
-
- let playGame = game();
-//  declares an overall winner in the console
-function scoreChecker(){
-  if (humanScore > compScore) {
-     return "You\'ve beaten the computer!";
- } else if (humanScore < compScore) {
-     return "The computer has beaten you!";
- } else {
-     return "You both lose!";
- } 
+function roundOnClick() {
+    playRound(humanMove, compMove);
+    let displayedHumanScore = humanScore;
+    let displayedCompScore = compScore;
+    console.log(displayedCompScore);
+   console.log(displayedHumanScore);
 }
 
-console.log(scoreChecker());
+
+
