@@ -32,9 +32,6 @@
   let humanScore = 0;
   function playRound(playerSelection, computerSelection) {
       compMove = computerPlay(action);
-      console.log(playerSelection);
-      console.log(computerSelection);
-      console.log(computerPlay(action));
       if (playerSelection === computerSelection) {
           return "You have tied! Try again";
       }
@@ -97,3 +94,8 @@ compScoreBox.innerHTML = displayedCompScore;
 compMoveBox.innerHTML = compMove;
 }
 
+function resetGame() {
+    displayedCompScore = 0;
+    displayedHumanScore = 0;
+    compMove = null;
+}
