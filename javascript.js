@@ -81,7 +81,8 @@ function roundOnClick() {
 
 // DOM Elements
 
-const scoreContainer = document.querySelector("#scoreContainer");
+const scoreContainerHuman = document.querySelector("#scoreContainerHuman");
+const scoreContainerComp = document.querySelector("#scoreContainerComp");
 const humanScoreBox = document.querySelector("#humanScore");
 const compScoreBox = document.querySelector("#compScore");
 const compMoveContainer = document.querySelector("#compMoveContainer");
@@ -89,8 +90,8 @@ const compMoveBox = document.querySelector("#compMoveBox");
 const gameOverContainer = document.querySelector("#gameOverContainer");
 const gameOverBox = document.querySelector("#gameOver");
 
-scoreContainer.appendChild(humanScoreBox);
-scoreContainer.appendChild(compScoreBox);
+scoreContainerHuman.appendChild(humanScoreBox);
+scoreContainerComp.appendChild(compScoreBox);
 compMoveContainer.appendChild(compMoveBox);
 gameOverContainer.appendChild(gameOverBox);
 
