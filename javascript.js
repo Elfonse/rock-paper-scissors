@@ -94,8 +94,29 @@ compScoreBox.innerHTML = displayedCompScore;
 compMoveBox.innerHTML = compMove;
 }
 
+document.getElementById("resetGame").addEventListener("click", function() {
+    resetGame();
+  });
+
+
 function resetGame() {
-    displayedCompScore = 0;
+    console.log("test");
+    humanScore = 0;
+    compScore= 0;
     displayedHumanScore = 0;
+    displayedCompScore = 0
     compMove = null;
+    humanScoreBox.innerHTML = 0;
+    compScoreBox.innerHTML = 0;
+    compMoveBox.innerHTML = "";
 }
+
+/* document.getElementById("rock").removeEventListener("click", playRound); {
+    humanMove = "rock";
+};
+document.getElementById("paper").removeEventListener("click", playRound); {
+        humanMove = "paper";
+};
+document.getElementById("scissors").removeEventListener("click", playRound); {
+    humanMove = "scissors";
+}; */
