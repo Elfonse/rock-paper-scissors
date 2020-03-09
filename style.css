@@ -48,24 +48,26 @@ flex-direction: column;
 }
 
 .scoreContainer {
-    width: 50%;
-    height: 50%;
-    margin-top: 20px;
-    margin-left: 5%;
-    margin-right: 5%;
+ 
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
-    outline: 1px solid black;
+
 
 }
 
 .score {
     margin: 5px 5px 5px 5px; 
-    outline: 1px solid black;
+    font-size: 20px;
 
 
+
+}
+
+.scoreOutput {
+    margin: 0px;
+    font-size: 20px;
 }
 
 .buttonImage {
@@ -84,4 +86,9 @@ flex-direction: column;
 
 #compMoveBox {
     text-align: center;
+    font-size: 20px;
+}
+
+.compMove {
+    font-size: 20px;
 }
