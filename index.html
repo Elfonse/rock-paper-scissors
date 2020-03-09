@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
         <title>Rock Paper Scissors!</title>
         <meta charset="UTF-8"/>
         <link rel="stylesheet" href="style.css">
@@ -12,22 +13,25 @@
          <h1 id="pageTitle">Rock, Paper, Scissors!</h1>
         </div>
          <!-- Container for R,P,S buttons-->
-         <div class = "buttonContainer">
-            <div class ="button" id="rock">
-                <img src="./images/rock.png" alt="Rock" id="buttonImage">
+         <div class="buttonContainer">
+            <div class="button" id="rock">
+                <img src="./images/rock.png" alt="Rock" class="buttonImage" id="rockImage">
             </div>
-            <div class ="button" id="paper">
-                <img src="./images/paper.png" alt="Paper" id="buttonImage">
+            <div class="button" id="paper">
+                <img src="./images/paper.png" alt="Paper" class="buttonImage">
             </div>
-            <div class ="buttonScissors" id="scissors" >
-                <img src="./images/scissors.png" alt="Scissors" id="buttonImageScissors">
+            <div class="buttonScissors" id="scissors" >
+                <img src="./images/scissors.png" alt="Scissors" class="buttonImageScissors">
             </div>
          </div>
           <!-- container for compMoveContainer-->
          <div id="compMoveContainer">
-             <div id="compMoveBox" class="score">
-                <span class="ScoreOutput">Comp move is:</span>
+            <div class="compMoveText" id="compMoveText">
+                <span class="compMove"> Computer Chooses:</span>
+                <div id="compMoveBox">
+                </div>
              </div>
+
          </div>
           <!-- container for score counter-->
          <div class="scoreContainer" id="scoreContainerHuman">
